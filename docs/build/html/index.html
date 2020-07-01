@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to rpncalc’s documentation! &#8212; rpncalc 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-rpncalc-s-documentation">
+<h1>Welcome to rpncalc’s documentation!<a class="headerlink" href="#welcome-to-rpncalc-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="module-rpn.io">
+<span id="rpn-io"></span><h1>rpn io<a class="headerlink" href="#module-rpn.io" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">This file is executed first when the rpncalc application is run by the user.</div>
+<div class="line">USAGE:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Interactive:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">rpncalc                         Launch in interactive mode</div>
+<div class="line"><br /></div>
+<div class="line">example:</div>
+<div class="line"><br /></div>
+<div class="line">rpncalc</div>
+<div class="line">&gt; 1 2 +</div>
+<div class="line">3 &gt; 5 +</div>
+<div class="line">8 &gt; quit</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">One Time Use:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">rpncalc [expression]</div>
+<div class="line"><br /></div>
+<div class="line">To evaluate a one-line expression</div>
+<div class="line">One can also excute several expressions in a pipeline</div>
+<div class="line">by using the ‘,’ operator to seperate them.</div>
+<div class="line"><br /></div>
+<div class="line">examples:</div>
+<div class="line"><br /></div>
+<div class="line">rpncalc 1 2 +</div>
+<div class="line">3</div>
+<div class="line"><br /></div>
+<div class="line">rpncalc 1 2 +, 5 +</div>
+<div class="line">8</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">NOTE: The expression should be supplied in the form of a string to the rpncalc.</div>
+</div>
+</div>
+<div class="section" id="module-rpn.config">
+<span id="rpn-config"></span><h1>rpn config<a class="headerlink" href="#module-rpn.config" title="Permalink to this headline">¶</a></h1>
+<p>This file stores the value of global variables and sets the variables using a rc file
+(‘.rpnrc’) if it is present in your home directory.</p>
+</div>
+<div class="section" id="module-rpn.custom_errors">
+<span id="rpn-custom-errors"></span><h1>rpn custom_errors<a class="headerlink" href="#module-rpn.custom_errors" title="Permalink to this headline">¶</a></h1>
+<p>My very own execption class made just for this rpn calculator.
+This file converts exceptions objects into beautiful strings using __str__</p>
+<dl class="py class">
+<dt id="rpn.custom_errors.ConversionToBase10">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">ConversionToBase10</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em>, <em class="sig-param"><span class="n">typ</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.ConversionToBase10" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles my very own made error for the app,
+when the output can’t be converted to base 10.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.Infinite">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">Infinite</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.Infinite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles my very own made error for the app, when the output is infinite.
+The calculations with infinity along with limits is not avialable in this version.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.OneWordCommand">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">OneWordCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.OneWordCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles my very own made error for the app,
+when we supply other commands to one command functions.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.Overflow">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">Overflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.Overflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the math Overflow Exception,
+when the output overflows.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.Type">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">Type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em>, <em class="sig-param"><span class="n">typ</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.Type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the Type Exceptions.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.Value">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">Value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.Value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the Value Exceptions.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.ZeroDivision">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">ZeroDivision</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.ZeroDivision" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class handles Zero Division Error and returns relavent error string.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="rpn.custom_errors.ZeroRaisedToZero">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.custom_errors.</code><code class="sig-name descname">ZeroRaisedToZero</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.custom_errors.ZeroRaisedToZero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles my very own made error for the app, 0 raised to power of 0.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-rpn.calc">
+<span id="rpn-calc"></span><h1>rpn calc<a class="headerlink" href="#module-rpn.calc" title="Permalink to this headline">¶</a></h1>
+<p>This file contains the code for parser and the different functionalities present in the
+calculator. The flow of the application is from calc.py to io.py</p>
+<dl class="py function">
+<dt id="rpn.calc.change_ans_by_mode">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">change_ans_by_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">an</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#rpn.calc.change_ans_by_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the answer to the required mode set by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>an</strong> (<em>str</em>) – It is the answer of the rpn calculations after</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the answer in the correct mode.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.check_macro">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">check_macro</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr3</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#rpn.calc.check_macro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if there is a macro name in the list made from user input string
+and stores it, if there is no other variable already using that name. If an already
+user declared macro was re-declared by the user again then it will overwrite that
+macro.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arr3</strong> (<em>list</em>) – this list is the user input string in list form.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>if there was a ‘macro’, string in the list it returns True else False.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.check_mode">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">check_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#rpn.calc.check_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks the mode of the rpncalc that the user wants.
+Modes in rpncalc - decimal, binary, ocatal, hexadecimal, radians and degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>list</em>) – an array with all the commands passed by the user as input string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>returns true if the string contains a mode changing command</dt><dd><p>else return false.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.clear_commands">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">clear_commands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#rpn.calc.clear_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the user string contains clear commands.
+It is also responsible for executing those commands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>list</em>) – the user string after removing extraspaces in the form of list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns True if there was a clear command, else returns False</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.count_more_operands_needed">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">count_more_operands_needed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#rpn.calc.count_more_operands_needed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the string and finds out the number of operands needed,
+based on the number of binary operators and unary operators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>str</em>) – a is the string supplied by the user</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of operands that need to be taken from the stack</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.interactive_use">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">interactive_use</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.interactive_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when user wants to calculate rpn expressions
+interactively. The program quits if the user types ‘quit’ or creates an EOF error.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.make_str">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">make_str</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stac</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#rpn.calc.make_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an arry it removes the extra spaces and forms a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stac</strong> (<em>list</em>) – stac is the name of the array.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>res is the resulting string of the array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.my_help">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">my_help</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_of_function</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.my_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>My own help functionality to help user, about the functionalities present in the
+calculator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_of_function</strong> (<em>str</em>) – name of the function or operator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.one_time_use">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">one_time_use</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.one_time_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function gets called if the user wants to use the rpncalc for one time use.
+User can parse just one ron expression or parse many expressions in a pipeline
+seperated by commas ‘,’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – string given by user from the args in command line.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the answer to the user.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_expression_binop">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_expression_binop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_expression_binop" title="Permalink to this definition">¶</a></dt>
+<dd><p>expression : expression expression PLUS
+| expression expression MINUS
+| expression expression MULTIPLY
+| expression expression DIVIDE
+| expression expression LEFTSHIFT
+| expression expression CHKNOTEQUAL
+| expression expression BITAND
+| expression expression BOOLOR
+| expression expression BITOR
+| expression expression BOOLAND
+| expression expression BOOLXOR
+| expression expression POW
+| expression expression CHKLESSOREQUAL
+| expression expression CHKGREATEROREQUAL
+| expression expression MIN
+| expression expression MAX
+| expression expression MOD
+| expression expression BITXOR
+| expression expression RIGHTSHIFT
+| expression expression LESSTHAN
+| expression expression GREATERTHAN
+| expression expression EQUALTO
+| expression expression LOG</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_expression_int_float_hex_bin">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_expression_int_float_hex_bin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_expression_int_float_hex_bin" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>expression<span class="classifier">INT</span></dt><dd><div class="line-block">
+<div class="line">FLOAT</div>
+<div class="line">BIN</div>
+<div class="line">HEX</div>
+<div class="line">OCT</div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_expression_name">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_expression_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_expression_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>expression : NAME</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_expression_unop">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_expression_unop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_expression_unop" title="Permalink to this definition">¶</a></dt>
+<dd><p>expression : expression UMINUS
+| expression DECREMENT
+| expression BOOLNOT
+| expression BITNOT
+| expression COSH
+| expression SINH
+| expression TANH
+| expression COS
+| expression SIN
+| expression ACOS
+| expression ASIN
+| expression ATAN
+| expression FACT
+| expression HNL
+| expression HNS
+| expression NHL
+| expression NHS
+| expression INCREMENT
+| expression EXP
+| expression LN
+| expression SQRT
+| expression CEIL
+| expression FLOOR
+| expression ROUND
+| expression ABS
+| expression SIGN
+| expression IP
+| expression FP</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_statement_expression">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_statement_expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_statement_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>statement : expression</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.p_statement_name_binop">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">p_statement_name_binop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.p_statement_name_binop" title="Permalink to this definition">¶</a></dt>
+<dd><p>expression : expression NAME ASSIGN</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.print_dic">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">print_dic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dic</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.print_dic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dic</strong> (<em>dict</em>) – [takes a dictionary type data as input]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.rand_func">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">rand_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr2</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#rpn.calc.rand_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and assignes a random value of rand variable in the user input string.
+the random value assigned is always in between the range of 0 and 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arr2</strong> (<em>list</em>) – takes input as list made from the user input string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns a list after replacing rand with a random value between 0 and 1.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.repeat_func">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">repeat_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em>, <em class="sig-param"><span class="n">stac</span></em>, <em class="sig-param"><span class="n">parallel</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.repeat_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>repeat function is used to repeat an operator given number of times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>list</em>) – the array of the input string given by user.</p></li>
+<li><p><strong>stac</strong> (<em>list</em>) – the stack present in the calculator.</p></li>
+<li><p><strong>parallel</strong> (<em>int</em>) – 0 means not parallel execution, 1 means parallel execution.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>a tuple of string, stack and int flag for the successful</dt><dd><p>execution of the repeat function.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.stack_manipulation">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">stack_manipulation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em>, <em class="sig-param"><span class="n">stac</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.calc.stack_manipulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performes all the stack manipulation functions on the user
+supplied string. This function is also responsible for filling the
+rand variable in string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>list</em>) – [arr is the list made from the user string]</p></li>
+<li><p><strong>stac</strong> (<em>list</em>) – [stac is the calculator’s stack of type list]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns a tuple of (str, list, int). String is the new user string, list is the new stack and integer can take two values 0 or 1</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.stack_properties">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">stack_properties</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#rpn.calc.stack_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>These one word command tels about the properties of stack.
+‘stack’ command changes the display of stack from horizontal to vertical and vice-versa.
+‘depth’ command pushes the length of the stack in the stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>list</em>) – the user string after removing extraspaces in the form of list</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if there was a stack property command or else False.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rpn.calc.stack_value">
+<code class="sig-prename descclassname">rpn.calc.</code><code class="sig-name descname">stack_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#rpn.calc.stack_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the supplied input into a base 10 representation of the
+number in the string form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>can be of any type</strong><strong>, </strong><strong>int</strong><strong> , </strong><strong>float</strong><strong>, </strong><strong>string</strong><strong> or </strong><strong>decimal type.</strong> (<em>i</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string which is the base 10 repesentation of ‘i’</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-rpn.lexer">
+<span id="rpn-lexer"></span><h1>rpn lexer<a class="headerlink" href="#module-rpn.lexer" title="Permalink to this headline">¶</a></h1>
+<p>This file is responnsible for the lexer used by this rpn calculator.</p>
+<dl class="py class">
+<dt id="rpn.lexer.RPNlexer">
+<em class="property">class </em><code class="sig-prename descclassname">rpn.lexer.</code><code class="sig-name descname">RPNlexer</code><a class="headerlink" href="#rpn.lexer.RPNlexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class has all the tokens that are to be classified by this rpn calculator.</p>
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_ABS">
+<code class="sig-name descname">t_ABS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_ABS" title="Permalink to this definition">¶</a></dt>
+<dd><p>abs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_ACOS">
+<code class="sig-name descname">t_ACOS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_ACOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>acos</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_ASIN">
+<code class="sig-name descname">t_ASIN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_ASIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>asin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_ATAN">
+<code class="sig-name descname">t_ATAN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_ATAN" title="Permalink to this definition">¶</a></dt>
+<dd><p>atan</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_BIN">
+<code class="sig-name descname">t_BIN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_BIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>0[bB][0-1]+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_CEIL">
+<code class="sig-name descname">t_CEIL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_CEIL" title="Permalink to this definition">¶</a></dt>
+<dd><p>ceil</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_COS">
+<code class="sig-name descname">t_COS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_COS" title="Permalink to this definition">¶</a></dt>
+<dd><p>cos</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_COSH">
+<code class="sig-name descname">t_COSH</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_COSH" title="Permalink to this definition">¶</a></dt>
+<dd><p>cosh</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_EXP">
+<code class="sig-name descname">t_EXP</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_EXP" title="Permalink to this definition">¶</a></dt>
+<dd><p>exp</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_FACT">
+<code class="sig-name descname">t_FACT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_FACT" title="Permalink to this definition">¶</a></dt>
+<dd><p>fact</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_FLOAT">
+<code class="sig-name descname">t_FLOAT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_FLOAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>d*.d+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_FLOOR">
+<code class="sig-name descname">t_FLOOR</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_FLOOR" title="Permalink to this definition">¶</a></dt>
+<dd><p>floor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_FP">
+<code class="sig-name descname">t_FP</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_FP" title="Permalink to this definition">¶</a></dt>
+<dd><p>fp</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_HEX">
+<code class="sig-name descname">t_HEX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_HEX" title="Permalink to this definition">¶</a></dt>
+<dd><p>0[xX][0-9a-fA-F]+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_HNL">
+<code class="sig-name descname">t_HNL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_HNL" title="Permalink to this definition">¶</a></dt>
+<dd><p>hnl</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_HNS">
+<code class="sig-name descname">t_HNS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_HNS" title="Permalink to this definition">¶</a></dt>
+<dd><p>hns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_INT">
+<code class="sig-name descname">t_INT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_INT" title="Permalink to this definition">¶</a></dt>
+<dd><p>d+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_IP">
+<code class="sig-name descname">t_IP</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_IP" title="Permalink to this definition">¶</a></dt>
+<dd><p>ip</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_LN">
+<code class="sig-name descname">t_LN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_LN" title="Permalink to this definition">¶</a></dt>
+<dd><p>ln</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_LOG">
+<code class="sig-name descname">t_LOG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_LOG" title="Permalink to this definition">¶</a></dt>
+<dd><p>log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_MAX">
+<code class="sig-name descname">t_MAX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_MAX" title="Permalink to this definition">¶</a></dt>
+<dd><p>max</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_MIN">
+<code class="sig-name descname">t_MIN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_MIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>min</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_NAME">
+<code class="sig-name descname">t_NAME</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>[<a href="#id1"><span class="problematic" id="id2">a-zA-Z_</span></a>][a-zA-Z_0-9]*</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_NHL">
+<code class="sig-name descname">t_NHL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_NHL" title="Permalink to this definition">¶</a></dt>
+<dd><p>nhl</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_NHS">
+<code class="sig-name descname">t_NHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_NHS" title="Permalink to this definition">¶</a></dt>
+<dd><p>nhs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_OCT">
+<code class="sig-name descname">t_OCT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_OCT" title="Permalink to this definition">¶</a></dt>
+<dd><p>0[oO][0-7]+</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_POW">
+<code class="sig-name descname">t_POW</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_POW" title="Permalink to this definition">¶</a></dt>
+<dd><p>pow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_ROUND">
+<code class="sig-name descname">t_ROUND</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_ROUND" title="Permalink to this definition">¶</a></dt>
+<dd><p>round</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_SIGN">
+<code class="sig-name descname">t_SIGN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_SIGN" title="Permalink to this definition">¶</a></dt>
+<dd><p>sign</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_SIN">
+<code class="sig-name descname">t_SIN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_SIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>sin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_SINH">
+<code class="sig-name descname">t_SINH</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_SINH" title="Permalink to this definition">¶</a></dt>
+<dd><p>sinh</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_SQRT">
+<code class="sig-name descname">t_SQRT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_SQRT" title="Permalink to this definition">¶</a></dt>
+<dd><p>sqrt</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_TANH">
+<code class="sig-name descname">t_TANH</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_TANH" title="Permalink to this definition">¶</a></dt>
+<dd><p>tanh</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rpn.lexer.RPNlexer.t_newline">
+<code class="sig-name descname">t_newline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpn.lexer.RPNlexer.t_newline" title="Permalink to this definition">¶</a></dt>
+<dd><p>n+</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">rpncalc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, jack17529.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
