@@ -142,11 +142,14 @@ This is the command line help from our reference implementation:
 
 ## Installation
 
-1. Install the requirements file.
+1. Unzip the repository. 
+2. `cd` inside the repository.
+3. Install the package using `sudo python3 setup.py install` 
 
 ## Tests
 
 The test are written using `pytest` and `unittest`
+See the tests present in `test` directory or just eun them using `pytest` command.
 
 ## Docs
 
