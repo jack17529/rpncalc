@@ -144,7 +144,8 @@ This is the command line help from our reference implementation:
 
 1. Unzip the repository. 
 2. `cd` inside the repository.
-3. Install the package using `sudo python3 setup.py install` 
+3. Install the package using `sudo python3 setup.py install --record uninstall.txt`
+4. Uninstall the package using `sudo rm $(cat uninstall.txt)`
 
 ## Tests
 
