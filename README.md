@@ -1,7 +1,7 @@
 # rpncalc
 
 Best RPN calculator on the net!  
-This is the version 1.0.0 of rpncalc and is licenced under GPL V3. This is a Python 3.6.9 project following the PEP 8 conventions, made with care in vscode(the newest version). The app gets installed in the form of a cli package, with the help of the setup.py file present in the root directory of the project. Pylint is used for Python 3 style. Google docstrings are used for comments in the project. Black and autopep8 is used for auto formatting. Okay, vulture was used for dead code removal, but there wasn't any dead code :P 
+This is the version 1.0.0 of rpncalc and is licenced under GPL V3. This is a Python 3.6.9 project following the PEP 8 conventions, made with care in vscode(the newest version). The app gets installed in the form of a cli package, with the help of the setup.py file present in the root directory of the project. Pylint is used for Python 3 style. Google docstrings are used for comments in the project. Black and autopep8 is used for auto formatting. Okay, vulture was used for dead code removal, but there wasn't any dead code :P  
 I have tried to make the most user friendly rpn calculator, which is robust and maintainable at the same time. Please install/use the rpncalc project exactly the way as it is written in the respective topics below. Please use vscode to view the code. Please put a file named .rpnrc in your home directory, if you want to modify the configuration settings.
 
 ## Functionalities
