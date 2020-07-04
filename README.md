@@ -11,8 +11,9 @@ This is the command line help from our reference implementation:
 
     USAGE:
 
-      rpncalc                          Launch in interactive mode
-      rpncalc [expression]             Evaluate a one-line expression
+      rpncalc                                   Launch in interactive mode
+      rpncalc [expression]                      Evaluate a one-line expression
+      rpncalc [expression1] , [expression2]     One can also excute several expressions in a pipeline by using the ',' operator.
 
     RC FILE
 
