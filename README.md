@@ -9,18 +9,18 @@ This is the command line help from our reference implementation:
 
     USAGE:
 
-      rpn                          Launch in interactive mode
-      rpn [expression]             Evaluate a one-line expression
+      rpncalc                          Launch in interactive mode
+      rpncalc [expression]             Evaluate a one-line expression
 
     RC FILE
 
-      rpn will execute the contents of ~/.rpnrc at startup if it exists.
+      rpncalc will execute the contents of ~/.rpnrc at startup if it exists.
 
     EXAMPLES
-
-      rpn 1 2 + 3 + 4 + 5 +              => 15
-      rpn pi cos                         => -1.0
-      rpn                                => interactive mode
+    
+      rpncalc 1 2 + 3 + 4 + 5 +              => 15
+      rpncalc pi cos                         => -1.0
+      rpncalc                                => interactive mode
 
 ### Command Set
 
@@ -144,8 +144,14 @@ This is the command line help from our reference implementation:
 
 1. Unzip the repository. 
 2. `cd` inside the repository.
-3. Install the package using `sudo python3 setup.py install --record uninstall.txt`
-4. Uninstall the package using `sudo rm $(cat uninstall.txt)`
+3. Install the package using `pip3 install .`
+4. Uninstall the package using `pip3 uninstall rpncalc`
+
+## For one time usage
+
+1. `set -f` (to disable glob)
+2. Use `rpncalc 2 3 *, 4 *`
+3. `set +f`
 
 ## Tests
 
