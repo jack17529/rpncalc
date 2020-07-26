@@ -10,8 +10,7 @@ rpncalc.egg-info/PKG-INFO
 rpncalc.egg-info/SOURCES.txt
 rpncalc.egg-info/dependency_links.txt
 rpncalc.egg-info/entry_points.txt
-rpncalc.egg-info/not-zip-safe
+rpncalc.egg-info/requires.txt
 rpncalc.egg-info/top_level.txt
-test/__init__.py
 test/test_calc.py
 test/test_lexer.py

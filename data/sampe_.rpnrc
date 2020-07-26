@@ -1,0 +1,25 @@
+[number settings]
+decimal_precesion=2
+
+[mode settings]
+#supported modes are: decimal,binary,octal,hexadecimal
+# and only one of them can be 1 and rest will be 0.
+dec=1
+bin=0
+oct=0
+hex=0
+# for angles: radian,degree
+# and only one of them can be 1 and the other will be 0.
+rad=1
+deg=0
+
+# Choose names except these names = ['clr','clv','cla','dup','dupn','drop','dropn','repeat',
+# 'stack','pick','depth','sign','roll','rolld','swap','macro','help','exit','hnl','hns',
+# 'nhl','nhs','exp','fact','sqrt','ln','log','pow','rand','bin','dec','oct','hex',
+# 'ceil','floor','round','ip','fp','sign','min','max','abs','acos','asin','atan','cos',
+# 'cosh','sin','sinh','tanh','rad','deg']
+
+[constants]
+#default constants are: pi=3.141592653589793 and e=2.718281828459045
+pi=3.14
+#clr=2
